@@ -18,11 +18,14 @@ Doing questions on the Neetcode 150 program, and other practice Qs to get an int
 </table>
 </div>
 
-
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=ZI2z5pq0TqA">
-    <img src="https://img.youtube.com/vi/ZI2z5pq0TqA/maxresdefault.jpg" alt="Watch Video" style="width:70%;">
-  </a>
+
+### Sample Video
+
+<a href="https://www.youtube.com/watch?v=ZI2z5pq0TqA">
+  <img src="https://img.youtube.com/vi/ZI2z5pq0TqA/maxresdefault.jpg" alt="Watch Video" style="width:70%;">
+</a>
+
 </div>
 
 ## Repo Structure
