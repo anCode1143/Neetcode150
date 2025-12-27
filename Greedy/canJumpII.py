@@ -6,7 +6,7 @@ def jump(nums: List[int]) -> int:
     # return steps 
     maxJump = nums[0]
     startSection = 0
-    steps = 1
+    steps = 0
     while maxJump < len(nums)-1:
         steps += 1
         prevMaxJump = maxJump
@@ -27,3 +27,14 @@ def jump(nums: List[int]) -> int:
             r = farthest
             res += 1
         return res
+"""
+cue for diagnosing pattern - trying to find linear solution in dp-esque problem
+
+how to implement the solution - get the max jump in each step with an idea like BFS
+
+struggled parts - updating variables
+
+complexity details
+    speed - linear, iterates the array once
+    memory - o(1)
+"""

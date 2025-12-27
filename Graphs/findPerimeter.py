@@ -42,3 +42,19 @@ def islandPerimeter(grid: List[List[int]]) -> int:
     return perimeter
             
 print(islandPerimeter([[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]))
+
+"""
+cue for diagnosing pattern - traversing a plot of land by its area
+
+how to implement the solution
+    find starting point
+    do standard BFS with a queue
+    if a square cannot be added to the queue (more land from island) means its and edge means its += 1 for perimeter
+
+struggled parts - conditional for finding perimeter
+
+complexity details
+    speed - m*n for finding first land square, same for bfs;
+        worst case iterates the whole map, never goes through the same square twice given visited set
+    memory - m*n, visited set
+"""
