@@ -97,3 +97,15 @@ class MyCircularQueue:
 
             def isFull(self) -> bool:
                 return self.space == 0
+            
+"""
+cue for diagnosing pattern - links, adding and removing elements dynamically with pointers
+
+how to implement the solution - be careful of exceptions
+
+struggled parts - flow control and conditional states
+
+complexity details
+    speed - all operations are constant
+    memory - constant overheaad
+"""

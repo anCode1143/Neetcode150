@@ -12,3 +12,7 @@ def rangeSumBST(root: Optional[TreeNode], low: int, high: int) -> int:
             dfs(node.right)
     dfs(root)
     return answer
+
+"""
+how to implement the solution - note value before deciding the path to further traverse
+"""

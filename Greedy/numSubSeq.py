@@ -35,3 +35,18 @@ def numOfSubsequences(s: str) -> int:
     return max(appendL, appendC, appendT)
 
 print(numOfSubsequences("LTBLLTTALT"))
+
+"""
+cue for diagnosing pattern - understand you need to count substrings and then interpret the best positions, how to do these things in minimal complexity
+
+how to implement the solution - 
+    iterate the string finding the optimal C position in linear time
+    implement a substring count method of linear time
+    compare counts among optimal L, C, and T insertions
+
+struggled parts - optimal string traversal in finding substring
+
+complexity details
+        speed - linear, iterate the string once to find the optimal C position
+        space - constant 
+"""

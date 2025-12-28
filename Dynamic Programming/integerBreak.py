@@ -21,3 +21,20 @@ def integerBreak(n: int) -> int:
                 dp[num] = max(dp[num], dp[i] * dp[num - i])
 
         return dp[n]
+
+"""
+cue for diagnosing pattern - optimising backtracking
+
+how to implement the solution
+    establish base cases and build up the running answer until the target
+    recurrence relation - understand the possible ways answers can be derived and how to express them
+
+struggled parts - recurrence relation, must understand the possible ways answers can be derived and how to express them
+
+compare my code and to the standard: what I could do differently
+    if i understood the solution deeper, the code/solution would be more elegant
+
+complexity details
+    speed - quadratic; for every element up until the target, it will iterate within the bounds to find the optimised recurrence relation
+    memory - linear; stores a dict for the optimised solution of every element up until the target
+"""

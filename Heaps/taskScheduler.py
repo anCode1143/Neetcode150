@@ -53,3 +53,22 @@ class standardSolution:
             if q and q[0][1] == time:
                 heapq.heappush(maxHeap, q.popleft()[0])
         return time
+
+"""
+cue for diagnosing pattern - handling big elements in an orderly fashion; load balancing
+
+how to implement the solution
+    define the amount of tasks
+    add to heap and simulate time
+    when task is idle, add to queue with a time to pop
+    loop until no more tasks exist
+
+struggled parts - variable names confused me, maxheaps are a bit awkward in python
+
+compare my code and to the standard: what I could do differently
+    time skip optimisation
+
+complexity details
+    speed - n*log26; linear time for processing task counts, main loop pushes worst case log26 tasks times n possible times.
+    memory - m; unique tasks
+"""
