@@ -57,3 +57,21 @@ class Solution:
 
                 res = max(res, r - l + 1)
         return res
+    
+"""
+cue for diagnosing pattern - iterating through an array checking for certain conditions in linear time
+
+how to implement the solution
+    init left and right pointer, hashmap for the count of elements in range
+    if most common character in window + k >= windwo size, update answer to window size and extend window to the right
+    else, shrink from left
+        if window size is 1, move both pointers
+
+struggled parts - trying to figure out the solution with sliding windows
+
+improvement from standard solution - heavily overcomplicated the code
+
+complexity details
+    speed - linear, iterate through array with window, never rechecking anything and saving values in a hashmap
+    memory - constant, hashap to save counts of max 26 values
+"""

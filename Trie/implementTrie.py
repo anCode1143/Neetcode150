@@ -75,3 +75,19 @@ class PrefixTree:
                 return False
             cur = cur.children[i]
         return True
+    
+"""
+cue for diagnosing pattern - it says trie...
+
+how to implement the solution - 
+    boundless tree with arrays of set lengths
+    nodes within arrays that are defined
+
+struggled parts
+    whether i had to define my own treenode
+    how id store children nodes
+
+complexity details
+    speed - everything is linear; traversal logic
+    memory - not too much overhead, just stores data inserted
+"""

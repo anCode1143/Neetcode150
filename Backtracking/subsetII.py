@@ -40,3 +40,22 @@ class Solution:
 
         backtrack(0, [])
         return res
+    
+    """
+cue for diagnosing pattern - finding permutations and comprehensive combinations
+
+how to implement the solution
+    implemented recursive algorithm
+        base case - all elements considered, answer appended
+        append index element and call recursion, pop element after for combinations considering elements excluding that one
+        if index == index+1, iterate until theyre different
+
+struggled parts
+    building recursive algorithm
+    restructuring backtracking for skipping element logic
+
+complexity details
+    speed -n*2^n, multiplicative n comes from passing copies, 
+        2^n is backtracking tree of choosing to pick element i or not n times
+    memory - n*2^n, 2^n permutations times n length
+"""

@@ -23,3 +23,21 @@ class Solution:
                 triangle[row][col] += min(triangle[row + 1][col], triangle[row + 1][col + 1])
 
         return triangle[0][0]
+    
+"""
+cue for diagnosing pattern - outcome depends on past choices, each step leads to exclusive choices
+
+how to implement the solution
+    initialise pyramid array of infinity
+    iterate through array calculating min step for every position until target
+
+struggled parts - recurrence relation; what exactly the dp[i] needed to be, and that i was to map out every single element
+
+improvement from standard solution 
+    bottom up is always the optimal solution, doing things in place wouldve lead to better memory
+
+complexity details
+    speed - n where n is the amount of elements in the input, each element is referenced max thrice
+        once for initialising the element, another for checking its two children's potential value
+    memory - n, a replicated size of the triangle array is made
+"""

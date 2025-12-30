@@ -83,3 +83,21 @@ class Solution:
                     board[r][c] = "X"
                 elif board[r][c] == "T":
                     board[r][c] = "O"
+
+
+"""
+cue for diagnosing pattern - same as pacific atlantic flow, dfs from edges, wanna keep that pattern in mind
+
+how to implement the solution
+    spread nodes from edges and save if condition is met
+        edges are iterated with two for loops
+
+struggled parts - gotta be careful with the indices
+
+improvement from standard solution
+    couldve checked Os and Ss in the same iteration
+
+complexity details
+    time - M*N linear, all nodes are visited in constant time, through dfs and later through iterations
+    memory - M*N linear, through recursive call stack, worst case iterates through the entire matrix
+"""

@@ -15,3 +15,19 @@ def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -
         return pFound, qFound
     treeTraversal(root)
     return lowestAncestor
+
+"""
+
+how to implement the solution
+    write recursive tree traversal function, 
+    tracking when nodes are found with return values
+    when both are found, assign a global variable the first time it is the case
+
+struggled parts - 
+    defining base case and structure for recursion. 
+    base case is not always if the node is empty
+
+complexity details
+    speed - linear, goes through all nodes once
+    memory - height, recursive stack
+"""
