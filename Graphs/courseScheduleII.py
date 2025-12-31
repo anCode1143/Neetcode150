@@ -59,3 +59,24 @@ class Solution:
             if dfs(c) == False:
                 return []
         return output
+    
+"""
+cue for diagnosing pattern - the fact that data is connected to each other with directions
+
+how to implement the solution
+    implement topological sort from previous part
+        init adjacency list
+        have visiting and visit set
+        implement dfs called for every module
+            if theres no prereq, return true, add to visit.
+            if visiting, return false for cycle detection
+            else iterate prereqs checking if theyre doable. remove modules from visiting (backtracking properties)
+    make conditional more explicit, when returning true, append the module to the answer
+
+struggled parts - backtracking property of topological sort's cycle detection (general recursion stuff)
+
+complexity details
+    speed - O(N + P) the amount of courses adding the prerequisites, 
+        this is in linear time as all nodes are only visited once given the use of sets
+    memory - O(N + P), stores the adjacency list and iterates through lists 
+"""

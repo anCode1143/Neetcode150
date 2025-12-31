@@ -21,3 +21,15 @@ def verticalOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
     for column in range(minKey, maxKey+1):
         answer.append(colArrays[column])
     return answer
+
+"""
+how to implement the solution
+    do bfs, right to left, keeping track of column, 
+    then adding it into a dedicated column map
+
+struggled parts - realising my initial solution with dfs is wrong, failed to foresee wrong ordering
+
+complexity details
+    speed - linear, all nodes iterates through once
+    memory - linear, store all nodes for answer
+"""

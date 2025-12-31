@@ -33,3 +33,13 @@ class Solution:
             return res
 
         return dfs(root, root.val)
+
+"""
+how to implement the solution
+    init maxvalue as -inf, pass dfs traversal
+    if node is higher than maxvalue, update it and the answer
+
+complexity details
+    speed - linear, traverses down every node in order to check if its a good node
+    memory - linear, height of the recursion stack
+"""

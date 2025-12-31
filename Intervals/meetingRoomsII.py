@@ -24,14 +24,6 @@ def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         return max(maxMeetings, len(end) - endPointer)
 
 
-"""
-Definition of Interval:
-class Interval(object):
-    def __init__(self, start, end):
-        self.start = start
-        self.end = end
-"""
-
 class Solution:
     def minMeetingRooms(self, intervals: List[Interval]) -> int:
         start = sorted([i.start for i in intervals])
@@ -48,3 +40,20 @@ class Solution:
                 count -= 1
             res = max(res, count)
         return res
+    
+"""
+cue for diagnosing pattern - interval input
+
+how to implement the solution
+    create two sorted arrays of endings and beginings
+    iterate pointer between min of next meetingend or meetingbegin. 
+        if meeting end, current meetings reduced, else current meetings increase
+        simulating time without running individual time
+    return max recorded currmeetings
+
+struggled parts - the solution, parsing the intervals into arrays
+
+complexity details
+    speed - nlogn for sorting, then there is linear time going through the two arrays
+    memory - linear, stores arrays in proportion to the intervals given
+"""
