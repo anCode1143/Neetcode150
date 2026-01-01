@@ -65,3 +65,16 @@ class Solution:
         last.right = first
         first.left = last
         return first
+    
+"""
+how to implement the solution
+    inorder traversal into an array
+    use pointers in array to easily, iteratively turn into dll
+
+struggled parts
+    understanding the specifications in-place
+
+complexity details
+    speed - linear, iterate through tree once, then array once
+    memory -linear, store every node in an array
+"""

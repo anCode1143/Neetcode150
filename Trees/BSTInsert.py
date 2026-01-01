@@ -37,3 +37,17 @@ class Solution:
             root.left = self.insertIntoBST(root.left, val)
 
         return root
+    
+"""
+
+how to implement the solution - traverse tree until it becomes null, append node there
+
+struggled parts
+    didnt click that to insert into a bst, we can just keep traversing until we find its place
+
+improvement from standard solution - cleaner recursion (?)
+
+complexity details
+    speed - height, recursively going down the hight of the tree to find empty pointer
+    memory - height, recursive stack is the height of the tree
+"""
