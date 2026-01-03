@@ -48,4 +48,14 @@ class Solution:
 
         return res
     
+"""
+cue for diagnosing pattern - running every single possible combination
 
+how to implement the solution
+    init a dictionary for each number and strings
+    create backtracking algorithm where backtracking is called for every possible letter
+
+complexity details
+    speed - amount of letters^len(n) * n, how much possible combinations exist times popping the last char
+    memory - amount of letters^len(n) * n, amount of answers x len of answer
+"""

@@ -64,3 +64,22 @@ class Solution:
                         temp.add(nextLock)
             begin = temp
         return -1
+    
+"""
+cue for diagnosing pattern - inputs needs to be iterated incrementally, draws similarity to path finding
+
+how to implement the solution
+    put banned nodes in a set
+    do bfs going 8 directions, -1 and +1 for each digit. add to visit set.
+    check if current == target
+
+struggled parts - wanted to transfer to int but ultimately had no point. 
+    make sure to think things through at a high level
+
+improvement from standard solution - bidirectional for speed optimisation
+
+complexity details
+    speed - digits^wheels, as thats the amount of nodes the algorithm will go through worst case
+    memory - digits^wheels, amount of possible elements to be stored in visit
+    both are technically linear
+"""

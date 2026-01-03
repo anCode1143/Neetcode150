@@ -92,3 +92,13 @@ class LRUCache:
             lru = self.left.next
             self.remove(lru)
             del self.cache[lru.key]
+
+"""
+cue for diagnosing pattern - tracking order of values while doing operations in constant time
+
+how to implement the solution
+    use a hashmap of DLLNodes, 
+    then implement mru and delete functions
+
+struggled parts - challenge in verbosity without helper functions. understand the repitition of some operations
+"""

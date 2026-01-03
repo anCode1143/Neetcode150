@@ -12,3 +12,18 @@ def tribonacci(self, n: int) -> int:
         index2 = index3
         index3 = current
     return index3
+
+"""
+cue for diagnosing pattern - tracking future value with past one
+
+how to implement the solution
+    init first three values
+    iterate till target; calculate new value and shift all variables forward
+
+struggled parts
+    shifting elements for constant space complexity
+
+complexity details
+    speed - linear, goes up to the target from 0
+    memory - constant, only tracking n-3 values
+"""

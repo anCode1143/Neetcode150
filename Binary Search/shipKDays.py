@@ -51,3 +51,19 @@ class Solution:
                 l = cap + 1
 
         return res
+    
+"""
+cue for diagnosing pattern - finding the optimised value by a series of guesses
+
+how to implement the solution
+    set low as 1 and high as the sum of the array
+    do binary search with a helper function verifying if the guess is valid
+
+struggled parts - 
+    helper function read, the question
+    careful of borders in binary search
+
+complexity details
+    speed - nlogn, binary search is logn * verifying the guess each time is n
+    memory - constant
+"""
