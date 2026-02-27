@@ -1,0 +1,43 @@
+from typing import Optional
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution:
+    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next:
+            return head
+        # split list
+        left = head
+        right = self.middle(head)
+        middle = right.next # temp
+        right.next = None
+        right = middle
+
+        # sort + merge list
+        left = self.sortList(left)
+        right = self.sortList(right)
+        return self.merge(left, right)
+
+    def middle(self, head):
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+
+    def merge(self, list1, list2):
+        head = tail = ListNode()
+        while list1 and list2:
+            if list1.val < list2.val:
+                tail.next = list1
+                list1 = list1.next
+            else:
+                tail.next = list2
+                list2 = list2.next
+            tail = tail.next
+        if list2:
+            tail.next = list2
+        if list1:
+            tail.next = list1
+        return head.next
